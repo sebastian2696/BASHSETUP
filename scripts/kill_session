@@ -1,0 +1,26 @@
+#! /bin/bash
+set -e
+
+USER=$1
+MSSG=$2
+
+if [ -z "$USER" ]; then
+	echo "You must supply a user"
+	exit 1
+fi
+
+NUM=`who -u | grep $USER | wc -l`
+MSG="You have been logged off due to inactivity"
+sudo -v
+echo "Killing sessions for $USER"
+echo "$NUM sessions found"
+#sleep 2
+
+if [ -z "$MSSG" ]; then
+	echo $MSG | write $USER
+else
+	echo $MSSG | write $USER
+fi
+
+#sleep 2
+sudo killall -u $USER

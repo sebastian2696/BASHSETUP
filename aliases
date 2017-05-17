@@ -1,0 +1,69 @@
+####################################################################
+#################### Here are some aliases #########################
+####################################################################
+
+OS=`uname`
+
+# generic aliases
+alias google='web_search google'
+alias ..="cd .."
+alias :q="exit"
+alias grep="grep --color=always"
+alias tmuxa="tmux attach-session -t"
+alias tmuxl="tmux list-sessions"
+alias htop="sudo htop"
+alias sshon="eval \"$(ssh-agent -s)\" && ssh-add ~/.ssh/id_rsa"
+alias fb="web_search google fb"
+
+# tmux.conf
+# if tmux.conf does not exist
+alias tmuxf="tmux -f ~/.tmux.conf"
+
+# restart a zsh profile
+alias restart="exec zsh -l"
+
+# cool utilities
+alias wanip='wget http://ipinfo.io/ip -qO -'
+alias temp='curl wttr.in'
+
+# aliases to scripts in ~/.scripts
+alias fixnet="~/.scripts/scripts/fixnet.sh 2"
+alias speedtest="~/.scripts/speedtest-cli"
+alias tarp="~/.scripts/scripts/tarprog.sh"
+#alias gcc="~/.scripts/colorgcc.pl"
+
+if [[ "$OS" == 'Darwin' ]] # Mac specific aliases
+then
+
+	alias la="ls -aFCG"
+	alias ll="ls -ltrFCG"
+	alias lat="ls -latrFCG"
+
+	alias playground="cd ~/playground/"
+  alias lock="pmset displaysleepnow"
+
+	alias brewi="brew install"
+	alias port="sudo port install"
+	alias portupdate="sudo port selfupdate && sudo port upgrade outdated"
+	alias brewupdate="brew update && brew upgrade"
+
+	alias camera="sudo killall VDCAssistant"
+	alias notify="open /System/Library/CoreServices/NotificationCenter.app/"
+
+	alias stfu="osascript -e 'set volume output muted true'"
+	alias vup="osascript -e 'set volume output volume ((output volume of (get volume settings)) + 10)'"
+	alias vdo="osascript -e 'set volume output volume ((output volume of (get volume settings)) - 10)'"
+	alias ql="qlmanage -p &>/dev/null"
+elif [[ "$OS" == 'Linux' ]] # Linux specific aliases
+then
+	alias ls="ls -CF --color=always"
+	alias l="ls -CF --color=always"
+	alias ll="ls -ltrF --color=always"
+	alias la="ls -aCF --color=always"
+	alias latr="ls -latrF --color=always"
+
+	alias apti="sudo apt-get install"
+	alias aptu="sudo apt-get update && sudo apt-get upgrade"
+        alias dnfi="sudo dnf install"
+        alias dnfu="sudo dnf upgrade"
+fi
