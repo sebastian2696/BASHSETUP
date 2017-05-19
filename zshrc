@@ -133,5 +133,5 @@ man() {
 }
 
 #Powerline
-PATH="/Users/goku2696/Library/Python/2.7/bin:$PATH"
-. /Users/goku2696/Library/Python/2.7/lib/python/site-packages/powerline/bindings/zsh/powerline.zsh
+PATH="$HOME/Library/Python/2.7/bin:$PATH"
+. $HOME/Library/Python/2.7/lib/python/site-packages/powerline/bindings/zsh/powerline.zsh

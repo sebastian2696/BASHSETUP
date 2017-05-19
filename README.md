@@ -4,5 +4,12 @@ BASH ENVIRONMENT
 This includes my custom setup for JANUS, VIM, TMUX.
 BASH Scripts will be comming up 
 
-For MAC Users : you require ITERM
+For MAC Users : you require ITERM2
+Linux / Fedora Users : Update Soon
 
+The script requires a Bash Environment Variable set to a Temp Directory
+To enable the script you need --> chmod +x
+
+I would recommend looking at the aliases !!!
+
+Special Thanks to Neel Shah
