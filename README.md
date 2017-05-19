@@ -12,6 +12,6 @@ To enable the script you need --> chmod +x
 
 I would recommend looking at the aliases !!!
 
-BREW is needed in order to run this script
+[BREW](https://brew.sh/) is needed in order to run this script
 
 Special Thanks to Neel Shah
