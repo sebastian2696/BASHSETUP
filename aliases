@@ -19,6 +19,8 @@ alias fb="web_search google fb"
 # if tmux.conf does not exist
 alias tmuxf="tmux -f ~/.tmux.conf"
 
+# alias chrome="open -a 'Google Chrome'"
+
 # restart a zsh profile
 alias restart="exec zsh -l"
 

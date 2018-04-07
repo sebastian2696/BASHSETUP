@@ -37,7 +37,7 @@ call janus#add_group("colors")
 
 ""Powerline
 
-set rtp+=$HOME/Library/Python/2.7/lib/python/site-packages/powerline/bindings/vim
+set rtp+=/Users/goku2696/Library/Python/2.7/lib/python/site-packages/powerline/bindings/vim
 
 ""
 "" Customisations
